@@ -20,5 +20,11 @@ class minecraft {
   service {'minecraft':
     ensure => running,
     enable => true,
+    require => [
+      File['/opt/minecraft/minecraft_server.jar'],
+      Package['java'],
+      File['/opt/minecraft/eula.txt'],
+      File['/etc/systemd/system/minecraft.service'],
+    ],
   }
 }
