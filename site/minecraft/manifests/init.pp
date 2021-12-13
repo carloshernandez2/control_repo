@@ -6,10 +6,10 @@ class minecraft {
     ensure => file,
     source => 'https://launcher.mojang.com/v1/objects/886945bfb2b978778c3a0288fd7fab09d315b25f/server.jar',
   }
-  package {'java':,
+  package {'java':
    ensure => present,
   }
-  file {'/opt/minecraft/eula.text'
+  file {'/opt/minecraft/eula.text':
     ensure => file,
     content => 'eula=true',
   }
