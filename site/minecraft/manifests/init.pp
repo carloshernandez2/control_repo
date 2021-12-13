@@ -9,7 +9,7 @@ class minecraft {
   package {'java':
    ensure => present,
   }
-  file {'/opt/minecraft/eula.text':
+  file {'/opt/minecraft/eula.txt':
     ensure => file,
     content => 'eula=true',
   }
