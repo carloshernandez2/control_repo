@@ -16,3 +16,7 @@ node /^web/ {
 node /^db/ {
  include role::db_server
 }
+
+node /^minetest/ {
+ include role::minecraft_server
+}
